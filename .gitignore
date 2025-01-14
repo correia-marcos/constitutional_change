@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+
+# Ignore Rproj user files
+.Rproj.user/
+*.Rproj
+
+# Ignore data sources
+data/raw/*
+
+.DS_Store
+/data/.DS_Store
+*/.DS_Store
