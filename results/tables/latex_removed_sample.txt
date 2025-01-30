@@ -1,0 +1,37 @@
+
+> # Print the LaTeX table to the file
+> print(latex_table_removed_cons, type = "latex", include.rownames = FALSE)
+% latex table generated in R 4.4.2 by xtable 1.8-4 package
+% Wed Dec  4 17:26:16 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+  \hline
+Country & Year & Size \\ 
+  \hline
+Austria\_Hungary & 1849.00 & 5016 \\ 
+  Baden & 1818.00 & 4719 \\ 
+  Bavaria & 1808.00 & 3239 \\ 
+  Bavaria & 1818.00 & 7701 \\ 
+  Czechoslovakia & 1918.00 & 1148 \\ 
+  Czechoslovakia & 1920.00 & 8019 \\ 
+  Czechoslovakia & 1960.00 & 10272 \\ 
+  German\_Democratic\_Republic & 1949.00 & 9142 \\ 
+  Germany\_Federal\_Republic & 1949.00 & 13673 \\ 
+  Germany(Prussia) & 1848.00 & 2794 \\ 
+  Germany(Prussia) & 1849.00 & 8941 \\ 
+  Republic\_of\_Vietnam & 1956.00 & 5290 \\ 
+  Republic\_of\_Vietnam & 1967.00 & 6639 \\ 
+  Yugoslavia(Serbia) & 1835.00 & 5270 \\ 
+  Yugoslavia(Serbia) & 1838.00 & 2740 \\ 
+  Yugoslavia(Serbia) & 1869.00 & 5755 \\ 
+  Yugoslavia(Serbia) & 1888.00 & 11073 \\ 
+  Yugoslavia(Serbia) & 1901.00 & 6582 \\ 
+   \hline
+\end{tabular}
+\caption{Constitution Removed from the final dataset} 
+\label{tab:constitutions}
+\end{table}
+
+> # Close the connection
+> sink()

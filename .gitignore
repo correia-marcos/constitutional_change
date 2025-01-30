@@ -21,7 +21,6 @@ wheels/
 *.egg
 
 # Data
-data/
 !.gitkeep
 
 # Environment
@@ -38,15 +37,13 @@ venv.bak/
 
 # Docker
 docker-compose.yml
-# Dockerfile
-
+Dockerfile
 
 # R project and junk files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-
 
 # Ignore Rproj user files
 .Rproj.user/
