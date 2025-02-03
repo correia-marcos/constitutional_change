@@ -1,0 +1,76 @@
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Local OS artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python specific
+__pycache__/
+*.py[cod]
+.python-version
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+*.pyd
+
+# R specific
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Jupyter/Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Data directories (modify per your project)
+data/raw/
+data/interim/
+data/processed/  # Only if you regenerate in container
+
+# Environment/config files
+.env
+.secrets
+credentials/
+config.local.*
+
+# Testing/coverage
+.coverage
+htmlcov/
+.pytest_cache/
+tests/
+
+# IDE specific
+.vscode/
+.idea/
+
+# Documentation
+docs/_build/
+site/
+
+# Build artifacts
+*.log
+*.pdb
+*.prof
+*.dll
+*.exe
+
+# Docker compose (if not needed in image)
+docker-compose.override.yml
+docker-compose.prod.yml
+
+# Large files (customize per project)
+*.zip
+*.tar.gz
+*.parquet  # If regenerating in container
