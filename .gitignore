@@ -35,6 +35,10 @@ venv.bak/
 # Jupyter
 .ipynb_checkpoints
 
+# IDE
+.vscode
+
+
 # Docker
 docker-compose.yml
 Dockerfile
