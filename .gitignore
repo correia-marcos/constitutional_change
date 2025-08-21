@@ -2,67 +2,57 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
 .eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
+.wheels/
+*.so
 
-# Data
-!.gitkeep
-
-# Environment
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Jupyter
-.ipynb_checkpoints
-
-# IDE
-.vscode
-
-
-# Docker
-docker-compose.yml
-Dockerfile
-
-# R project and junk files
-.Rproj.user
+# R
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
+# Keep the .Rproj if you want to share RStudio settings:
+# *.Rproj
 
-# Ignore Rproj user files
-.Rproj.user/
-*.Rproj
+# Environments (host)
+.env
+.venv/
+venv/
+env/
+ENV/
 
-# Ignore data sources
-data/raw/*
+# Jupyter
+.ipynb_checkpoints/
 
+# IDE
+.vscode/
+.idea/
+
+# OS cruft
 .DS_Store
-/data/.DS_Store
 */.DS_Store
+Thumbs.db
 
-# Logs and others
-__pycache__/
+# Data (track structure, ignore contents)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Logs
 *.log
-*.pyc
-*.pyo
 
+# Coverage / test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# DO NOT ignore these (we want them versioned)
+# Dockerfile
+# docker-compose.yml

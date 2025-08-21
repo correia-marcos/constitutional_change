@@ -1,18 +1,18 @@
-# Version control
 .git/
 .gitignore
 .gitattributes
 
-# Local OS artifacts
+# OS/IDE
 .DS_Store
 Thumbs.db
 *.swp
 *~
+.vscode/
+.idea/
 
-# Python specific
+# Python/R cache
 __pycache__/
 *.py[cod]
-.python-version
 .venv/
 venv/
 env/
@@ -20,57 +20,35 @@ env/
 .eggs/
 dist/
 build/
-*.so
-*.pyd
 
-# R specific
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-*.Rproj
 
-# Jupyter/Notebooks
+# Notebooks checkpoints (not the notebooks themselves)
 .ipynb_checkpoints/
-*.ipynb
 
-# Data directories (modify per your project)
+# Large/local data — we mount these at runtime
 data/raw/
 data/interim/
-data/processed/  # Only if you regenerate in container
+data/processed/
 
-# Environment/config files
+# Local secrets
 .env
 .secrets
 credentials/
 config.local.*
 
-# Testing/coverage
-.coverage
-htmlcov/
-.pytest_cache/
-tests/
-
-# IDE specific
-.vscode/
-.idea/
-
-# Documentation
+# Docs build outputs
 docs/_build/
 site/
 
-# Build artifacts
+# Logs, binaries
 *.log
 *.pdb
 *.prof
 *.dll
 *.exe
-
-# Docker compose (if not needed in image)
-docker-compose.override.yml
-docker-compose.prod.yml
-
-# Large files (customize per project)
-*.zip
 *.tar.gz
-*.parquet  # If regenerating in container
+*.zip
