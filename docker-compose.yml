@@ -1,0 +1,46 @@
+services:
+  rstudio:
+    build:
+      context: .
+      target: final
+    image: paper-dev:latest          # tag so the lab service can reuse it
+    container_name: paper-rstudio
+    ports:
+      - "8787:8787"
+    environment:
+      - USER=${RSTUDIO_USER:-rstudio}
+      - PASSWORD=${RSTUDIO_PASSWORD:-rstudio}
+      - RENV_PATHS_CACHE=/opt/renv/cache
+      - VIRTUAL_ENV=/opt/venv
+      - RETICULATE_PYTHON=/opt/venv/bin/python
+      - IN_DOCKER=true
+    volumes:
+      - ./:/paper
+      - renv_cache:/opt/renv/cache
+    working_dir: /paper
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8787/"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+
+  lab:
+    image: paper-dev:latest          # reuse the same built image
+    container_name: paper-jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_PORT=8888
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN:-}   # empty = no token; set in .env to protect
+      - PRUNE_R_KERNELS=true               # ensures Python-only kernels in Jupyter
+      - RENV_PATHS_CACHE=/opt/renv/cache
+      - VIRTUAL_ENV=/opt/venv
+      - IN_DOCKER=true
+    command: ["jupyter"]            # handled by entrypoint
+    volumes:
+      - ./:/paper
+      - renv_cache:/opt/renv/cache
+    working_dir: /paper
+
+volumes:
+  renv_cache:
